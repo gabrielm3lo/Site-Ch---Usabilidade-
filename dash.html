@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Painel</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"
+        integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
+        crossorigin="anonymous"></script>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="site-header sticky-top py-1 position-fixed col-12">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <a class="py-2" href="#">
+                    <img src="img/" alt="" height="45">
+                </a>
+                <a class="py-2 d-none d-md-inline-block" href="login.html">Sair</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+
+        <div class="row" id="row">
+
+
+            <aside class="d-none d-md-block col-md-2 aside">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <div class="d-flex align-items-center justify-content-center"
+                                style="background-color:rgb(164, 12, 12); width: 95%; height:160px;">
+                                Foto do usuario
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <span>
+                                    <i class="fas fa-address-card"> </i>
+                                </span>
+                                Compras
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span>
+                                    <i class="fas fa-file-contract"> </i>
+                                </span>
+                                Perfil
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span>
+                                    <i class="fas fa-history"></i>
+                                </span>
+                                Pagamento
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span>
+                                    <i class="fas fa-users"></i>
+                                </span>
+                                Contatos
+                            </a>
+                        </li>
+                        <li class="nav-item"></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </aside>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 py-4"
+                style="background-color:rgb(247, 247, 247); border-radius:5px">
+
+                <form method="POST">
+
+                    <h2>Cadastro</h2>
+                    <br>
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <label for="nome">Nome Completo</label>
+                            <input class="form-control" type="text" name="nome" id="" value="Gabriel" disabled>
+                        </div>
+
+                        <div class="form-group col-6">
+                            <label for="dtNasc">Data de nascimento</label>
+                            <input class="form-control" value="date" type="date" name="dtNasc" id="" disabled>
+                        </div>
+                    </div>
+
+
+                    <div class="form-row">
+                        <div class="form-group col" id="">
+                            <label>Email</label>
+                            <input class="form-control" type="email" name="email" value="gabs@gmail.com" disabled>
+                        </div>
+
+                        <div class="form-group col" id="">
+                            <label>Telefone</label>
+                            <input class="form-control" type="tel" name="tel" value="11 4002-8922" disabled>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-row">
+
+                        <div class="form-group col">
+                            <label for="altura">Pagamento</label>
+                            <input type="text" class="form-control" value="Cartão Crédito" disabled>
+                        </div>
+
+                        <div class="form-group col-6">
+                            <label>Bandeira</label>
+                            <select class="form-control" name="" id="" disabled>
+                                <option value="">MasterCard</option>
+                                <option value="">Visa</option>
+                                <option value="">Elo</option>
+                                <option value="">Amex</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+                        <div class="col-4">
+                            <label for=""> Concorda com os termos</label>
+                            <input type="checkbox" class="" name="" id="">
+                        </div>
+                        <input type="submit" value="Editar" class="form-control">
+                </form>
+
+
+                <!-- footer-->
+                <footer class="container">
+                    <p class="float-right"><a href="#">Voltar ao topo</a></p>
+                    <p>&copy; O Chá - 2022. &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos</a></p>
+                </footer>
+            </main>
+
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+</body>
+
+</html>
