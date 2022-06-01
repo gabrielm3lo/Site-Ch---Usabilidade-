@@ -6,16 +6,46 @@ const client = new MongoClient(url, {
   serverApi: ServerApiVersion.v1
 });
 
-const cliente = {
-    nome: "exemplo",
-    email: "exemplo@exemplo.com"
-  }
+function connect(){
+    client.connect((err) => {
+    if(err) throw err;
+    console.log('connected to database');
+  });
+} 
 
-client.connect((err) => {
-  const collection = client.db('site-cha').collection('clientes');
-  console.log('collection created');
-  collection.insertOne(cliente);
+function getAll(collection) {
+  return client.db('site-cha').collection(collection).find();
+}
+
+function getOne(collection, id) {
+  return client.db('site-cha').collection(collection).findOne(id);
+}
+
+function insert(collection, document) {
+  client.db('site-cha').collection(collection).insertOne(document);
   console.log('document inserted');
-  if(err) throw err;
-});
-client.close();
+  return document;
+}
+
+function update(collection, id, document) {
+  client.db('site-cha').collection(collection).updateOne(id, document);
+  console.log('document updated');
+  return document;
+}
+
+function deleteOne(collection, id) {
+  return client.db('site-cha').collection(collection).deleteOne(id);
+}
+
+function close() {
+  client.close();
+}
+module.exports = { 
+  connect,
+  getAll,
+  getOne,
+  insert,
+  update,
+  deleteOne,
+  close
+ }; 
