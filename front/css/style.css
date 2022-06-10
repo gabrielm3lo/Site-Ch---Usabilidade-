@@ -47,7 +47,7 @@ aside .nav-link.active {
 
 a>span{
   display: inline-block;
-  color: rgb(6, 95, 158);
+  color: rgb(0, 0, 0);
   width: 24px;
 }
 
@@ -70,11 +70,29 @@ a>span{
     margin: 5rem 0; /* Space out the Bootstrap <hr> more */
   }
   
-  /* Thin out the marketing headings */
-  .featurette-heading {
+  /* Textos index */
+  .featurette-heading_pes {
     font-weight: 300;
     line-height: 1;
     letter-spacing: -.05rem;
+    color: peru;
+    font-size: 50px;
+  }
+
+  .featurette-heading_mir {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+    color: #3b13cbd3;
+    font-size: 50px;
+  }
+
+  .featurette-heading_cran {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+    color: rgb(226, 109, 128);
+    font-size: 50px;
   }
   
   
@@ -88,14 +106,10 @@ a>span{
       font-size: 1.25rem;
       line-height: 1.4;
     }
-  
-    .featurette-heading {
-      font-size: 50px;
-    }
   }
   
   @media (min-width: 62em) {
-    .featurette-heading {
+    .featurette-heading_pes {
       margin-top: 7rem;
     }
   }
@@ -122,26 +136,15 @@ a>span{
   -webkit-transform: rotate(30deg);
   transform: rotate(30deg);
 }
-/*não gostei*/
-/*.product-device::before {
-  position: absolute;
-  top: 10%;
-  right: 10px;
-  bottom: 10%;
-  left: 10px;
-  content: "";
-  background-color: rgb(255, 255, 255);
-  border-radius:5px;
-}
-*/
+
 
 .overflow-hidden { overflow: hidden; }
 
-#bg-index{
-  background-image: url('../img/bg-index.jpg');
+#fundo-index{
+  background-image: url('../img/fundo_.png');
   background-size: cover;
   border-radius: 20px;
-  margin: 75px 25px;
+  margin: 75px 15px;
 }
 
 #row{
