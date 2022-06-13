@@ -23,42 +23,67 @@ mongoose
 });
 
 server.get("/cadastrados", async (req, res, next) => {
-  const cadastrados = await Cliente.find({});
-
-  return res.status(200).json(cadastrados);
-}).catch((err) => {
+  const cliente = await Cliente.find({})
+  .catch((err) => {
     console.log(err);
+  });
+
+  return res.status(200).json(cliente);
 });
+
+server.get("/cadastrados/:email", async (req, res, next) => {
+  const cliente = await Cliente.findOne( {email: req.params.email} )
+  .catch((err) => {
+    console.log(err);
+  });
+  return res.status(200).json(cliente);
+});
+
+server.post("/cadastrados/login", async (req, res) => {
+  const login = await Cliente.findOne(req.body)
+  .catch((err) => {
+    console.log(err);
+  });
+
+  if(login == null){
+    return res.status(401).send(false);
+  }
+  return res.status(200).send(true);
+})
 
 server.post("/cadastrados", async (req, res) => {
   const cliente = new Cliente(req.body);
 
-  await Cliente.create(cliente);
-  console.log("document inserted");
+  await Cliente.create(cliente).then(() => {
+    console.log("document inserted");    
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
   return res.status(201).json(cliente);
-}).catch((err) => {
-    console.log(err);
 });
 
 server.put("/cadastrados/:email", async (req, res) => {
   const email = req.params.email;
 
-  await Cliente.findOneAndUpdate({ email: email }, req.body);
+  await Cliente.findOneAndUpdate({ email: email }, req.body)
+  .catch((err) => {
+    console.log(err);
+  });
 
   return res.status(201).json({ message: "Dados atualizados" });
-}).catch((err) => {
-    console.log(err);
 });
 
 server.delete("/cadastrados/:email", async (req, res) => {
   const email = req.params.email;
 
-  await Cliente.findOneAndRemove({ email: email }, req.body);
+  await Cliente.findOneAndRemove({ email: email })
+  .catch((err) => {
+    console.log(err);
+  });
 
   return res.status(200).json({ message: "Cliente deletado" });
-}).catch((err) => {
-    console.log(err);
 });
 
 server.listen(3000);

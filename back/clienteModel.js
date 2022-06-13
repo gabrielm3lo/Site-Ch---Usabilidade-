@@ -5,9 +5,8 @@ const clienteSchema = new Schema({
     nome: String,
     sobrenome: String,
     email: String,
-    nasc: String,
-    tel: String, 
-    pwd: String
+    pwd: String,
+    nasc: String
 });
 const Cliente = mongoose.model('Cliente', clienteSchema, 'clientes');
 
