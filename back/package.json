@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "serve": "server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,6 +15,7 @@
     "express": "^4.18.1",
     "mongo-tools": "^1.0.0",
     "mongodb": "^4.6.0",
+    "mongoose": "^6.3.5",
     "morgan": "^1.10.0"
   }
 }
