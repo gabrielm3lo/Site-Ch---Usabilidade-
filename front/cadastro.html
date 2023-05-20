@@ -7,36 +7,28 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="POST">
+    <form id="teste">
+        <label>Login</label>
+        <input type="text" name="login">
 
+        <label>Senha</label>
+        <input type="password" name="senha">
 
-        <div class="login">
-            <label>Login</label><input type="text" name="login">
-            <label>Senha<input type="password" name="senha">
-        </div>
+        <label for="nome">Nome Completo</label>
+        <input type="text" name="nome" id="">
 
-        <div>
-            <label for="nome">Nome Completo</label>
-            <input type="text" name="nome" id="">
-        </div>
-    
-        <div>
+        <div class="seila">
             <label for="dtNasc">Data de nascimento</label>
-            <input type="date" name="dtNasc" id="">
+        <input type="date" name="dtNasc" id="">
         </div>
         
+
+        <label>Email</label>
+        <input type="email" name="email">
         
-
-        <div class="" id="">
-            <label>Email</label><input type="email" name="email">
-        </div>
-
-        <div class="" id="">
-            <label>Telefone</label><input type="tel" name="tel">
-        </div>
-
-        <input type="submit" value="Cadastrar">
-
+        <button type="submit">Enviar</button>
     </form>
+
+    <script src="./js/teste.js"></script>
 </body>
 </html>
