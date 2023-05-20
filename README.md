@@ -7,3 +7,4 @@
 - Na pasta back
   `node server.js`
 - Na pasta front abrir index.html
+- Acompanhar via MongoDB Atlas (https://cloud.mongodb.com/)
